@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+
+  main:
+    build: .
+    volumes:
+      - ./:/app
+    command: gunicorn main.app:app -b :8080 --worker-class aiohttp.GunicornWebWorker --reload --timeout 60 --access-logfile -
+    ports:
+      - "3307:8080"
