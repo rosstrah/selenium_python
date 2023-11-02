@@ -157,8 +157,8 @@ async def selenium_console_command(request):
         api = SeleniumApi()
         res = api.execute_console_command(url, console_command)
 
-        if res:
-            return web.Response(text='Команда выполнена' + res + '', status=200)
+        if res != '':
+            return web.Response(text='Команда выполнена: ' + str (res) + '', status=200)
 
         return web.Response(text='Ошибка выполнения команды', status=400)
     except ValueError:

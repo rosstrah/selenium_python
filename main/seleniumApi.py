@@ -51,18 +51,20 @@ class SeleniumApi:
         driver = webdriver.Chrome(options=options)
         try:
             driver.get(url)
-            time.sleep(2)
+            time.sleep(1)
 
-            height = driver.execute_script("return document.body.scrollHeight")
-            driver.set_window_size(1920, height)
-
-            result = driver.execute_script(command)
+            #command = ''
+            #result = driver.execute_script('return Math.ceil(0.6)')
+            #result = driver.execute_script("return 'mozilla'.length")
+            result = driver.execute_script(f"return {command}")
+            #time.sleep(2)
         except Exception:
+            print('$$$$$')
             print(Exception)
             pass
         finally:
             driver.close()
             driver.quit()
-
+        print('!!!!!')
         print(result)
         return result
