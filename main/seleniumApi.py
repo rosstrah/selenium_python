@@ -18,7 +18,7 @@ class SeleniumApi:
         result = False
 
         #options = webdriver.ChromeOptions()
-        options.add_extension('./crx/IIFCHHFNNMPDBIBIFMLJNFJHPIFIFFOG_1_2_13_0.crx')
+        options.add_extension('main/crx/IIFCHHFNNMPDBIBIFMLJNFJHPIFIFFOG_1_2_13_0.crx')
         #options.add_extension('main/crx/CJPALHDLNBPAFIAMEJDNHCPHJBKEIAGM_1_52_2_0.crx')
 
         driver = webdriver.Chrome(options=options)
@@ -53,7 +53,7 @@ class SeleniumApi:
         result = False
 
         #options = webdriver.ChromeOptions()
-        options.add_extension('./crx/IIFCHHFNNMPDBIBIFMLJNFJHPIFIFFOG_1_2_13_0.crx')
+        options.add_extension('main/crx/IIFCHHFNNMPDBIBIFMLJNFJHPIFIFFOG_1_2_13_0.crx')
         #options.add_extension('main/crx/CJPALHDLNBPAFIAMEJDNHCPHJBKEIAGM_1_52_2_0.crx')
 
         driver = webdriver.Chrome(options=options)
