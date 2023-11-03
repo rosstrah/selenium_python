@@ -17,6 +17,10 @@ class SeleniumApi:
         options.add_argument('--start-maximized')
         result = False
 
+        #options = webdriver.ChromeOptions()
+        options.add_extension('./crx/IIFCHHFNNMPDBIBIFMLJNFJHPIFIFFOG_1_2_13_0.crx')
+        #options.add_extension('main/crx/CJPALHDLNBPAFIAMEJDNHCPHJBKEIAGM_1_52_2_0.crx')
+
         driver = webdriver.Chrome(options=options)
         try:
             driver.get(url)
@@ -47,6 +51,10 @@ class SeleniumApi:
         options.add_argument('--headless')
         options.add_argument('--start-maximized')
         result = False
+
+        #options = webdriver.ChromeOptions()
+        options.add_extension('./crx/IIFCHHFNNMPDBIBIFMLJNFJHPIFIFFOG_1_2_13_0.crx')
+        #options.add_extension('main/crx/CJPALHDLNBPAFIAMEJDNHCPHJBKEIAGM_1_52_2_0.crx')
 
         driver = webdriver.Chrome(options=options)
         try:
